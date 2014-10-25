@@ -1,4 +1,5 @@
-var scroller = false;
+var scrollerEnabled = false;
+var scroller = $('.scroller');
 
 var updateView = function(){
 	
@@ -8,20 +9,16 @@ var updateView = function(){
 	$('section').each(function(){
 	
 		var section = $(this);
-		//console.log(section)
-		var offset = section[0].offsetTop;
-		//console.log(offset + ', ' + scrollLocation)
-
+		var offset = section.offset().top;
 
 		if(offset >= scrollLocation){
 			section.fadeIn(500);
 		}
 
 		//show scroller
-		if(scrollLocation > 150 && scroller == false){
-			scroller = true;
-			console.log('TIME FOR SCROLLER')
-			$('.scroller').fadeIn(800);
+		if(scrollLocation > 150 && scrollerEnabled == false){
+			scrollerEnabled = true;
+			scroller.fadeIn(800);
 		}
 	});
 
@@ -31,3 +28,11 @@ $(window).scroll(updateView);
 (function(){
 	updateView();
 })();
+
+scroller.on('click', function(){
+
+	$('body').animate({
+		scrollTop: 0
+	});
+
+});

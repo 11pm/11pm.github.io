@@ -165,4 +165,6 @@ section{
 }
 .scroller{
 	position: fixed;
+	left: calc(100vw - 70px);
+	top: calc(100vh - 70px)
 }

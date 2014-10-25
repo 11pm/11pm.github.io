@@ -94,6 +94,8 @@ section {
       color: #6f6f6f; }
 
 .scroller {
-  position: fixed; }
+  position: fixed;
+  left: calc(100vw - 70px);
+  top: calc(100vh - 70px); }
 
 /*# sourceMappingURL=main.css.map */
