@@ -30,21 +30,22 @@ nav {
   display: inline-block;
   margin: 0; }
   nav a {
-    width: 100%;
+    width: 50%;
+    text-align: center;
     box-sizing: border-box;
     font-size: 1em;
     color: #000;
     font-weight: 300;
     line-height: 1;
     float: left;
-    padding: 20px; }
+    padding: 10px; }
+    @media (min-width: 680px) {
+      nav a {
+        padding: 20px; } }
     nav a:hover {
       background: #e6e6e6; }
     nav a:visited {
       color: #000; }
-    @media (max-width: 680px) {
-      nav a:first-child {
-        border-bottom: 1px solid #bcbcbc; } }
     @media (min-width: 680px) {
       nav a {
         width: auto; } }
@@ -53,6 +54,7 @@ nav {
       margin-bottom: 2em; } }
 
 .container {
+  display: none;
   max-width: 1000px;
   margin: auto;
   margin-top: 0;

@@ -8,9 +8,9 @@ var updateView = function(){
 	$('section').each(function(){
 	
 		var section = $(this);
-		console.log(section)
+		//console.log(section)
 		var offset = section[0].offsetTop;
-		console.log(offset + ', ' + scrollLocation)
+		//console.log(offset + ', ' + scrollLocation)
 
 
 		if(offset >= scrollLocation){

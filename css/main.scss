@@ -57,14 +57,20 @@ nav{
 
 
 	a{
-		width: 100%;
+		width: 50%;
+		text-align: center;
 		box-sizing: border-box;
 		font-size: 1em;
 		color: $link-color;
 		font-weight: 300;
 		line-height: 1;
 		float: left;
-		padding: 20px;
+		padding: 10px;
+
+
+		@media(min-width: $break-small){
+			padding: 20px;
+		}	
 		//border-right: 1px solid lighten($text-color, 30%);
 		&:hover{
 			//border-bottom: 1px inset $border-color;
@@ -75,7 +81,7 @@ nav{
 		}
 		&:first-child{
 			@media(max-width: $break-small){
-				border-bottom: 1px solid $border-color;
+				//border-bottom: 1px solid $border-color;
 			}
 		}
 		
@@ -91,6 +97,7 @@ nav{
 }
 
 .container{
+	display: none;
 	max-width: $container-width;
 	margin: auto;
 	margin-top: 0;
