@@ -97,5 +97,8 @@ section {
   position: fixed;
   left: calc(100vw - 70px);
   top: calc(100vh - 70px); }
+  @media (max-width: 680px) {
+    .scroller {
+      display: none !important; } }
 
 /*# sourceMappingURL=main.css.map */

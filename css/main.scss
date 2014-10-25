@@ -166,5 +166,9 @@ section{
 .scroller{
 	position: fixed;
 	left: calc(100vw - 70px);
-	top: calc(100vh - 70px)
+	top: calc(100vh - 70px);
+
+	@media(max-width: $break-small){
+		display: none !important;
+	}
 }
