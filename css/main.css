@@ -1,0 +1,97 @@
+.cf {
+  *zoom: 1; }
+  .cf:before, .cf:after {
+    content: " ";
+    display: table; }
+  .cf:after {
+    clear: both; }
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  background: #EEEFF3;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-family: "Helvetica Neue", "sans-serif"; }
+
+a {
+  color: black;
+  text-decoration: none; }
+
+nav {
+  width: 100%;
+  background: white;
+  display: inline-block;
+  margin: 0; }
+  nav a {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1em;
+    color: #000;
+    font-weight: 300;
+    line-height: 1;
+    float: left;
+    padding: 20px; }
+    nav a:hover {
+      background: #e6e6e6; }
+    nav a:visited {
+      color: #000; }
+    @media (max-width: 680px) {
+      nav a:first-child {
+        border-bottom: 1px solid #bcbcbc; } }
+    @media (min-width: 680px) {
+      nav a {
+        width: auto; } }
+  @media (min-width: 680px) {
+    nav {
+      margin-bottom: 2em; } }
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 0;
+  background-color: #fff;
+  height: 2000px;
+  -moz-box-shadow: 0px 0px 17px 1px rgba(102, 102, 102, 0.91); }
+  .container header {
+    background: url(../img/hero2.jpg) bottom center fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px 0; }
+    .container header h1 {
+      color: white;
+      font-weight: 400;
+      text-align: center; }
+
+section {
+  width: 100%; }
+  section .hero {
+    padding: 40px 0 0; }
+    section .hero h1 {
+      color: #3c3c3c;
+      text-align: center;
+      font-weight: 700; }
+  section .inner-container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 1em 0; }
+    @media (min-width: 680px) {
+      section .inner-container {
+        max-width: 70%; } }
+    @media (min-width: 1200px) {
+      section .inner-container {
+        max-width: 50%; } }
+    section .inner-container p {
+      line-height: 1.8;
+      color: #6f6f6f; }
+
+.scroller {
+  position: fixed; }
+
+/*# sourceMappingURL=main.css.map */

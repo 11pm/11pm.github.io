@@ -1,0 +1,161 @@
+@import 'keyframes';
+
+$font: 'Helvetica Neue', 'sans-serif';
+
+$break-tiny: 420px;
+$break-small: 680px;
+$break-large: 1200px;
+
+$container-width: 1000px;
+
+$background-color: #EEEFF3;
+$primary-color: #fff;
+
+$text-color: #6f6f6f;
+$link-color: #000;
+$link-hover: $text-color;
+
+$hero: url(../img/hero2.jpg);
+
+.cf{
+	*zoom: 1;
+
+	&:before, 
+	&:after{
+		content: " ";
+		display: table;
+	}
+	&:after{
+		clear: both;
+	}
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing:border-box;
+  	-moz-box-sizing:border-box;
+  	-ms-box-sizing:border-box;
+  	box-sizing:border-box;
+}
+body{
+	background: $background-color;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	font-family: $font;
+}
+a{
+	color: black;
+	text-decoration: none;
+}
+
+nav{
+	width: 100%;
+	background: white;
+	display: inline-block;
+	$border-color: lighten($text-color, 30%);
+
+
+	a{
+		width: 100%;
+		box-sizing: border-box;
+		font-size: 1em;
+		color: $link-color;
+		font-weight: 300;
+		line-height: 1;
+		float: left;
+		padding: 20px;
+		//border-right: 1px solid lighten($text-color, 30%);
+		&:hover{
+			//border-bottom: 1px inset $border-color;
+			background: darken(white, 10%);
+		}
+		&:visited{
+			color: $link-color;
+		}
+		&:first-child{
+			@media(max-width: $break-small){
+				border-bottom: 1px solid $border-color;
+			}
+		}
+		
+		@media(min-width: $break-small){
+			width: auto;
+
+		}
+	}
+	margin: 0;
+	@media(min-width: $break-small){
+		margin-bottom: 2em;
+	}
+}
+
+.container{
+	max-width: $container-width;
+	margin: auto;
+	margin-top: 0;
+	background-color: $primary-color;
+	height: 2000px;
+	//-webkit-box-shadow: 0px 0px 17px 1px rgba(102,102,102,0.91);
+	-moz-box-shadow: 0px 0px 17px 1px rgba(102,102,102,0.91);
+	//box-shadow: 0px 0px 17px 1px rgba(102,102,102,0.91);
+
+
+
+	header{
+		
+		background: $hero bottom center fixed;
+		background-size: cover;
+		background-repeat: no-repeat;
+		padding: 40px 0;
+		h1{
+			color: white;
+			font-weight: 400;
+			
+			text-align: center;		
+		}
+
+	}
+}
+
+section{
+	
+
+	width: 100%;
+	//hide until in user view
+	
+	.hero{
+		padding: 40px 0 0;
+
+		h1{
+			color: darken($text-color, 20%);
+			text-align: center;
+			font-weight: 700;
+		}
+	}
+	.inner-container{
+		max-width: 90%;
+		margin: 0 auto;
+		padding: 1em 0;
+
+		@media(min-width: $break-small){
+			max-width: 70%;
+		}
+
+		@media(min-width: $break-large){
+			max-width: 50%;
+		}
+		//presets
+		p{
+			line-height: 1.8;
+			color: $text-color;
+
+		}
+
+
+	}
+
+}
+.scroller{
+	position: fixed;
+}
