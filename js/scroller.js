@@ -34,5 +34,6 @@ scroller.on('click', function(){
 	$('body').animate({
 		scrollTop: 0
 	});
-
+	//stop brower default link
+	return false;
 });
