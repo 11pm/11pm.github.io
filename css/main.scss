@@ -17,6 +17,8 @@ $link-hover: $text-color;
 
 $hero: url(../img/hero2.jpg);
 
+$pill-color: #19A3FF;
+
 .cf{
 	*zoom: 1;
 
@@ -103,11 +105,6 @@ nav{
 	margin-top: 0;
 	background-color: $primary-color;
 	height: 2000px;
-	//-webkit-box-shadow: 0px 0px 17px 1px rgba(102,102,102,0.91);
-	-moz-box-shadow: 0px 0px 17px 1px rgba(102,102,102,0.91);
-	//box-shadow: 0px 0px 17px 1px rgba(102,102,102,0.91);
-
-
 
 	header{
 		
@@ -141,28 +138,62 @@ section{
 		}
 	}
 	.inner-container{
-		max-width: 90%;
+		max-width: 100%;
 		margin: 0 auto;
 		padding: 1em 0;
 
-		@media(min-width: $break-small){
-			max-width: 70%;
+		&.default{
+			max-width: 90%;
+			@media(min-width: $break-small){
+				max-width: 70%;
+			}
+
+			@media(min-width: $break-large){
+				max-width: 50%;
+			}
+			//presets
+			p{
+				line-height: 1.8;
+				color: $text-color;
+
+			}	
+		}
+	}
+}
+
+#skills{
+	$line-color: #ccc;
+	//reset lists
+	.skills-list, .tools-list{
+		list-style: none;
+	}
+	.skills-list{
+		border-top: 1px solid $line-color; 
+		.lang{
+			color: white;
+			float: left;
+			background: $pill-color;
+			border-radius: 3px;
+			padding: 5px 10px;
 		}
 
-		@media(min-width: $break-large){
-			max-width: 50%;
-		}
-		//presets
-		p{
-			line-height: 1.8;
-			color: $text-color;
+		.tools-list{
+			
+			float: right;
+			border-left: 1px solid $line-color;
+
+			li{
+				padding-left: 4em;
+				margin:5px;
+				border-bottom: 1px solid $line-color;
+			}
 
 		}
-
-
 	}
 
+
 }
+
 .scroller{
 	position: fixed;
 	left: calc(100vw - 70px);

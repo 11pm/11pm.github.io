@@ -59,8 +59,7 @@ nav {
   margin: auto;
   margin-top: 0;
   background-color: #fff;
-  height: 2000px;
-  -moz-box-shadow: 0px 0px 17px 1px rgba(102, 102, 102, 0.91); }
+  height: 2000px; }
   .container header {
     background: url(../img/hero2.jpg) bottom center fixed;
     background-size: cover;
@@ -80,18 +79,38 @@ section {
       text-align: center;
       font-weight: 700; }
   section .inner-container {
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
     padding: 1em 0; }
-    @media (min-width: 680px) {
-      section .inner-container {
-        max-width: 70%; } }
-    @media (min-width: 1200px) {
-      section .inner-container {
-        max-width: 50%; } }
-    section .inner-container p {
-      line-height: 1.8;
-      color: #6f6f6f; }
+    section .inner-container.default {
+      max-width: 90%; }
+      @media (min-width: 680px) {
+        section .inner-container.default {
+          max-width: 70%; } }
+      @media (min-width: 1200px) {
+        section .inner-container.default {
+          max-width: 50%; } }
+      section .inner-container.default p {
+        line-height: 1.8;
+        color: #6f6f6f; }
+
+#skills .skills-list, #skills .tools-list {
+  list-style: none; }
+#skills .skills-list {
+  border-top: 1px solid #ccc; }
+  #skills .skills-list .lang {
+    color: white;
+    float: left;
+    background: #19A3FF;
+    border-radius: 3px;
+    padding: 5px 10px; }
+  #skills .skills-list .tools-list {
+    float: right;
+    border-left: 1px solid #ccc; }
+    #skills .skills-list .tools-list li {
+      padding-left: 4em;
+      margin: 5px;
+      border-bottom: 1px solid #ccc; }
 
 .scroller {
   position: fixed;

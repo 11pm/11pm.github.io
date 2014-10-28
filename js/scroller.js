@@ -16,13 +16,13 @@ var updateView = function(){
 		}
 
 		//show scroller
-		if(scrollLocation > 150 && scrollerEnabled == false){
+		if(scrollLocation > 150 && scrollerEnabled === false){
 			scrollerEnabled = true;
 			scroller.fadeIn(800);
 		}
 	});
 
-}
+};
 
 $(window).scroll(updateView);
 (function(){

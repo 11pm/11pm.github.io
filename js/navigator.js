@@ -1,11 +1,8 @@
 $('nav > a').on('click', function(){
 	var target = $(this.hash);
 	var offset = target.offset().top;
-	console.log(target)
 	//seconds to travel
 	var animation = 800;
-	if(offset < animation) animation = offset;
-	console.log(animation)
 	if(target){
 
 		$('body').animate({
@@ -16,4 +13,4 @@ $('nav > a').on('click', function(){
 	
 	//Stop browser from using default click
 	return false;
-})
+});
