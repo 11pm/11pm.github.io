@@ -104,7 +104,6 @@ nav{
 	margin: auto;
 	margin-top: 0;
 	background-color: $primary-color;
-	height: 2000px;
 
 	header{
 		
@@ -160,40 +159,134 @@ section{
 		}
 	}
 }
+//ADD CUSTOM STYLE TO SECTIONS
+#about{
+	.hero .me{
+		display: block;
+		margin: 0 auto;
+		margin-top: 0.5em;
+		border-radius: 50%;
+		border: 3px solid;
+		border-color: #fff;
 
-#skills{
-	$line-color: #ccc;
-	//reset lists
-	.skills-list, .tools-list{
-		list-style: none;
-	}
-	.skills-list{
-		border-top: 1px solid $line-color; 
-		.lang{
-			color: white;
-			float: left;
-			background: $pill-color;
-			border-radius: 3px;
-			padding: 5px 10px;
-		}
-
-		.tools-list{
-			
-			float: right;
-			border-left: 1px solid $line-color;
-
-			li{
-				padding-left: 4em;
-				margin:5px;
-				border-bottom: 1px solid $line-color;
-			}
-
+		-webkit-transition: border-color ease-in-out .15s;
+		-o-transition: border-color ease-in-out .15s;
+		transition: border-color ease-in-out .15s;
+		
+		&:hover{
+			border-color: rgb(204, 204, 204);
 		}
 	}
-
 
 }
 
+#skills{
+	$line-color: #ccc;
+
+	.skill-container{
+		display: block;
+		
+		//each block
+		div{
+			border-top: 1px solid $line-color;
+			margin-bottom: 3em;
+			overflow: auto;
+
+			.lang{
+				color: white;
+				float: left;
+				background: $pill-color;
+				border-top: 1px solid $pill-color !important;
+				padding: 5px 10px;
+			}
+
+			.tools-list{
+				float: right;
+				border-left: 1px solid $line-color;
+				list-style: none;
+
+				li{
+					padding: 0.7em 0.3em;
+					///margin: 0.7em;
+					border-bottom: 1px solid $line-color;
+					position: relative;
+				
+				}
+
+			}
+		}
+	}
+}
+#social{
+	//hide default
+	display: none;
+	
+	
+	padding: 1em;
+	//margin: 2em;
+	.social-grid{
+		margin: 0 auto;
+		display: inline-block;
+
+		a{
+			margin: 0 0.5em;
+		}
+	}
+}
+
+/*
+Mobile: 1
+Small: 2
+large: 3
+
+#skills{
+	$line-color: #ccc;
+	$base-margin: 2%;
+	.skill-container{
+	
+		
+		display: inline-block;
+		div{
+			margin: $base-margin;
+			
+			
+			float: left;
+			//mobile
+			max-width: 96%;
+			//small |  2+2 * 2
+			@media(min-width: $break-small){
+				max-width: calc(88%/2);
+			}
+			//large | 2+2 * 3
+			@media(min-width: $break-large){
+				max-width: calc(88%/5) 
+			}
+
+			.lang{
+				color: white;
+				float: left;
+				background: $pill-color;
+				border-top: 1px solid $pill-color;
+				padding: 5px 10px;
+				width: 100%;
+				text-align: center;
+			}
+			.tools-list{
+
+				list-style: none;
+				border: 1px solid $line-color;
+				li:not(:last-child){
+					border-bottom: 1px solid $line-color;
+				}
+				padding: 0.5em;
+			}
+
+		}
+
+	}
+
+}
+*/
 .scroller{
 	position: fixed;
 	left: calc(100vw - 70px);

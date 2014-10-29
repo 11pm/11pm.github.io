@@ -58,8 +58,7 @@ nav {
   max-width: 1000px;
   margin: auto;
   margin-top: 0;
-  background-color: #fff;
-  height: 2000px; }
+  background-color: #fff; }
   .container header {
     background: url(../img/hero2.jpg) bottom center fixed;
     background-size: cover;
@@ -94,24 +93,102 @@ section {
         line-height: 1.8;
         color: #6f6f6f; }
 
-#skills .skills-list, #skills .tools-list {
-  list-style: none; }
-#skills .skills-list {
-  border-top: 1px solid #ccc; }
-  #skills .skills-list .lang {
-    color: white;
-    float: left;
-    background: #19A3FF;
-    border-radius: 3px;
-    padding: 5px 10px; }
-  #skills .skills-list .tools-list {
-    float: right;
-    border-left: 1px solid #ccc; }
-    #skills .skills-list .tools-list li {
-      padding-left: 4em;
-      margin: 5px;
-      border-bottom: 1px solid #ccc; }
+#about .hero .me {
+  display: block;
+  margin: 0 auto;
+  margin-top: 0.5em;
+  border-radius: 50%;
+  border: 3px solid;
+  border-color: #fff;
+  -webkit-transition: border-color ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s;
+  transition: border-color ease-in-out .15s; }
+  #about .hero .me:hover {
+    border-color: #cccccc; }
 
+#skills .skill-container {
+  display: block; }
+  #skills .skill-container div {
+    border-top: 1px solid #ccc;
+    margin-bottom: 3em;
+    overflow: auto; }
+    #skills .skill-container div .lang {
+      color: white;
+      float: left;
+      background: #19A3FF;
+      border-top: 1px solid #19A3FF !important;
+      padding: 5px 10px; }
+    #skills .skill-container div .tools-list {
+      float: right;
+      border-left: 1px solid #ccc;
+      list-style: none; }
+      #skills .skill-container div .tools-list li {
+        padding: 0.7em 0.3em;
+        border-bottom: 1px solid #ccc;
+        position: relative; }
+
+#social {
+  display: none;
+  padding: 1em; }
+  #social .social-grid {
+    margin: 0 auto;
+    display: inline-block; }
+    #social .social-grid a {
+      margin: 0 0.5em; }
+
+/*
+Mobile: 1
+Small: 2
+large: 3
+
+#skills{
+	$line-color: #ccc;
+	$base-margin: 2%;
+	.skill-container{
+	
+		
+		display: inline-block;
+		div{
+			margin: $base-margin;
+			
+			
+			float: left;
+			//mobile
+			max-width: 96%;
+			//small |  2+2 * 2
+			@media(min-width: $break-small){
+				max-width: calc(88%/2);
+			}
+			//large | 2+2 * 3
+			@media(min-width: $break-large){
+				max-width: calc(88%/5) 
+			}
+
+			.lang{
+				color: white;
+				float: left;
+				background: $pill-color;
+				border-top: 1px solid $pill-color;
+				padding: 5px 10px;
+				width: 100%;
+				text-align: center;
+			}
+			.tools-list{
+
+				list-style: none;
+				border: 1px solid $line-color;
+				li:not(:last-child){
+					border-bottom: 1px solid $line-color;
+				}
+				padding: 0.5em;
+			}
+
+		}
+
+	}
+
+}
+*/
 .scroller {
   position: fixed;
   left: calc(100vw - 70px);
