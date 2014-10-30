@@ -65,7 +65,7 @@ nav {
     background-repeat: no-repeat;
     padding: 40px 0; }
     .container header h1 {
-      color: white;
+      color: black;
       font-weight: 400;
       text-align: center; }
 
@@ -97,7 +97,7 @@ section {
   display: block;
   margin: 0 auto;
   margin-top: 0.5em;
-  border-radius: 50%;
+  border-radius: 200%;
   border: 3px solid;
   border-color: #fff;
   -webkit-transition: border-color ease-in-out .15s;
@@ -129,66 +129,15 @@ section {
 
 #social {
   display: none;
+  margin: 0 auto;
+  width: 300px;
   padding: 1em; }
   #social .social-grid {
-    margin: 0 auto;
     display: inline-block; }
     #social .social-grid a {
+      text-align: center;
       margin: 0 0.5em; }
 
-/*
-Mobile: 1
-Small: 2
-large: 3
-
-#skills{
-	$line-color: #ccc;
-	$base-margin: 2%;
-	.skill-container{
-	
-		
-		display: inline-block;
-		div{
-			margin: $base-margin;
-			
-			
-			float: left;
-			//mobile
-			max-width: 96%;
-			//small |  2+2 * 2
-			@media(min-width: $break-small){
-				max-width: calc(88%/2);
-			}
-			//large | 2+2 * 3
-			@media(min-width: $break-large){
-				max-width: calc(88%/5) 
-			}
-
-			.lang{
-				color: white;
-				float: left;
-				background: $pill-color;
-				border-top: 1px solid $pill-color;
-				padding: 5px 10px;
-				width: 100%;
-				text-align: center;
-			}
-			.tools-list{
-
-				list-style: none;
-				border: 1px solid $line-color;
-				li:not(:last-child){
-					border-bottom: 1px solid $line-color;
-				}
-				padding: 0.5em;
-			}
-
-		}
-
-	}
-
-}
-*/
 .scroller {
   position: fixed;
   left: calc(100vw - 70px);
