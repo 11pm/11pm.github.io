@@ -105,6 +105,8 @@ section {
   transition: border-color ease-in-out .15s; }
   #about .hero .me:hover {
     border-color: #cccccc; }
+#about .about-me-text span {
+  font-weight: bold; }
 
 #skills .skill-container {
   display: block; }
